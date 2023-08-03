@@ -1,0 +1,9 @@
+services:
+  console:
+    image: wasm.dotnet/console
+    platform: wasi/wasm
+    runtime: io.containerd.wasmtime.v1
+  web:
+    image: wasm.dotnet/web
+    platform: wasi/wasm
+    runtime: io.containerd.wasmtime.v1

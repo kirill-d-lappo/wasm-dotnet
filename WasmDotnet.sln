@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WasmDotnet.Web", "src\WasmDotnet.Web\WasmDotnet.Web.csproj", "{3B9AB27D-3E88-4A20-ADEB-E5ED69E2E3B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WasmDotnet.Console", "src\WasmDotnet.Console\WasmDotnet.Console.csproj", "{C66F618C-6468-41CD-B4E8-8C7433F75188}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution", "solution", "{6B53AE6E-6DF6-4712-83D3-9E8162D69A40}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yaml = docker-compose.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B9AB27D-3E88-4A20-ADEB-E5ED69E2E3B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B9AB27D-3E88-4A20-ADEB-E5ED69E2E3B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B9AB27D-3E88-4A20-ADEB-E5ED69E2E3B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B9AB27D-3E88-4A20-ADEB-E5ED69E2E3B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C66F618C-6468-41CD-B4E8-8C7433F75188}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C66F618C-6468-41CD-B4E8-8C7433F75188}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C66F618C-6468-41CD-B4E8-8C7433F75188}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C66F618C-6468-41CD-B4E8-8C7433F75188}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

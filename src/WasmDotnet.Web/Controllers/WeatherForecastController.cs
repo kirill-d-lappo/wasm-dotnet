@@ -48,6 +48,8 @@ public class WeatherForecastController : ControllerBase
             })
             .ToArray();
 
+        await Task.Run(() => Thread.Sleep(1000));
+
         return forecast;
     }
 }

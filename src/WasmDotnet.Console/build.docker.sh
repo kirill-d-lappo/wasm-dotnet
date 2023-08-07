@@ -6,9 +6,9 @@
 #   * use containderd to pull images
 #   * wasm support
 
-mkdir -p ./out/console
-
 set -e
+
+mkdir -p ./out/console
 
 # Just in case
 # DOCKER_BUILDKIT=1

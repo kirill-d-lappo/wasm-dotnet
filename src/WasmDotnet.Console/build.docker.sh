@@ -1,5 +1,14 @@
 # run from project root
+
+# reqs:
+# * docker buildx enabled
+# * experimental features in docker:
+#   * use containderd to pull images
+#   * wasm support
+
 mkdir -p ./out/console
+
+set -e
 
 # Just in case
 # DOCKER_BUILDKIT=1
@@ -8,6 +17,6 @@ mkdir -p ./out/console
 # BUILDX_NO_DEFAULT_ATTESTATIONS=1
 
 # sdk docker image 7.0 does not support wasm runtime, so two step build
-DOCKER_BUILDKIT=1 docker build --output ./out/console -f ./src/WasmDotnet.Console/Dockerfile .  \
-\
-&& BUILDX_NO_DEFAULT_ATTESTATIONS=1 docker build --platform wasi/wasm -f ./src/WasmDotnet.Console/wasm.Dockerfile -t wasm.dotnet/console .
+docker buildx build --output ./out/console -f ./src/WasmDotnet.Console/Dockerfile .
+
+BUILDX_NO_DEFAULT_ATTESTATIONS=1 docker build --platform wasi/wasm -f ./src/WasmDotnet.Console/wasm.Dockerfile -t wasm.dotnet/console .

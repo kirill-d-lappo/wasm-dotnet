@@ -9,8 +9,8 @@ set -e
 # ===
 # manually i works:
 # > wasmtime ./out/web/WasmDotnet.Web.wasm --tcplisten localhost:8080 --env ASPNETCORE_URLS=http://0.0.0.0:8080
-docker run --rm -n "dotnet-web-wasmtime" -p 8080 --runtime=io.containerd.wasmtime.v1 --platform=wasi/wasm wasm.dotnet/web
+docker run --rm --name "dotnet-web-wasmtime" -p 8080 --runtime=io.containerd.wasmtime.v1 --platform=wasi/wasm wasm.dotnet/web
 
 # wasmedge
 # doesn't work, returns 255 exit code in docker, no output
-docker run --rm -n "dotnet-web-wasmedge" -p 8080 --runtime=io.containerd.wasmedge.v1 --platform=wasi/wasm wasm.dotnet/web
+docker run --rm --name "dotnet-web-wasmedge" -p 8080 --runtime=io.containerd.wasmedge.v1 --platform=wasi/wasm wasm.dotnet/web
